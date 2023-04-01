@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Parcial_2_Scripting
+namespace Parcial2_Scripting
 {
     public class Equipment
     {
         Random random = new Random();
-        public enum Class {Human,Beast,Hybrid,Any}
+        public enum Class { Human, Beast, Hybrid, Any }
         public string name;
         public int power;
         public int durability;

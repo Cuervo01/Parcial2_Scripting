@@ -1,6 +1,4 @@
-using System;
-
-namespace Parcial_2_Scripting
+namespace Parcial2_Scripting
 {
     public class Create_CharacterTest
     {
@@ -264,7 +262,7 @@ namespace Parcial_2_Scripting
             character1.CalculateDef(character1);
             character2.Attack(character1);
             character1.CalculateDef(character1);
-            if(character1.armor.durability == 1)
+            if (character1.armor.durability == 1)
             {
                 Assert.Fail();
             }
@@ -279,7 +277,7 @@ namespace Parcial_2_Scripting
             character2.CalculateDef(character2);
             character1.Attack(character2);
 
-            if(character2.hp < 0)
+            if (character2.hp < 0)
             {
                 Assert.Fail();
             }
@@ -294,7 +292,7 @@ namespace Parcial_2_Scripting
             character2.CalculateDef(character2);
             character1.Attack(character2);
 
-            if( character2.armor.durability < 0) { Assert.Fail(); } else { Assert.Pass(); }
+            if (character2.armor.durability < 0) { Assert.Fail(); } else { Assert.Pass(); }
         }
 
         [Test]

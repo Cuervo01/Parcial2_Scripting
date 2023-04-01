@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Parcial2_Scripting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Parcial_2_Scripting
+namespace Parcial2_Scripting
 {
     public class Weapon : Equipment
     {
@@ -19,7 +20,5 @@ namespace Parcial_2_Scripting
             int index = random.Next(WeaponNames.Length);
             WeaponName = WeaponNames[index];
         }
-
-
     }
 }

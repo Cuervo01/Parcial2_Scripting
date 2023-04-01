@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Parcial2_Scripting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Parcial_2_Scripting
+namespace Parcial2_Scripting
 {
     public class Character
     {
-        public enum ChrClass {Human,Beast,Hybrid}
+        public enum ChrClass { Human, Beast, Hybrid }
         Random random = new Random();
 
         public string[] weaponNames = { "Golden Weapon", "Dark Weapon", "Shiny Weapon" };
@@ -37,8 +38,8 @@ namespace Parcial_2_Scripting
 
         public Character Attack(Character enemy)
         {
-            int armDurabilityE = enemy.armor.durability; 
-            if(armDurabilityE <= 1)
+            int armDurabilityE = enemy.armor.durability;
+            if (armDurabilityE <= 1)
             {
                 enemy.hp = enemy.hp - enemy.atk;
                 enemy.armor.durability = armDurabilityE - 1;
@@ -55,13 +56,13 @@ namespace Parcial_2_Scripting
 
         public Character CalculateAtk(Character self)
         {
-                self.atk = self.atk + self.weapon.power;
+            self.atk = self.atk + self.weapon.power;
             return self;
         }
 
         public Character CalculateDef(Character self)
         {
-            if (self.armor.durability >=1)
+            if (self.armor.durability >= 1)
             {
                 self.def = self.def + self.armor.power;
             }
@@ -76,9 +77,9 @@ namespace Parcial_2_Scripting
         public Weapon CreateWeaponManually(string name, int power, int durability, Equipment.Class classtype)
         {
             Weapon newWeapon = new Weapon(name, power, durability, classtype);
-            if(newWeapon.durability > 1)
+            if (newWeapon.durability > 1)
             {
-                newWeapon.durability = random.Next(9,21);
+                newWeapon.durability = random.Next(9, 21);
             }
             return newWeapon;
         }
