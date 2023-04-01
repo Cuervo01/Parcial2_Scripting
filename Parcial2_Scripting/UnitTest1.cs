@@ -164,7 +164,7 @@ namespace Parcial2_Scripting
             character2.GetNewArmor(character2);
 
             Weapon chr1NewWeapon = character1.weapon;
-            Armor chr1ONewrmor = character1.armor;
+            Armor chr1ONewArmor = character1.armor;
 
             Weapon chr2NewWeapon = character2.weapon;
             Armor chr2NewArmor = character2.armor;
@@ -316,21 +316,13 @@ namespace Parcial2_Scripting
             Armor chr2OldArmor = character2.armor;
 
             character1.GetNewWeapon(character1);
-            character2.GetNewWeapon(character2);
             character1.GetNewArmor(character1);
-            character2.GetNewArmor(character2);
 
             Weapon chr1NewWeapon = character1.weapon;
             Armor chr1ONewrmor = character1.armor;
 
-            Weapon chr2NewWeapon = character2.weapon;
-            Armor chr2NewArmor = character2.armor;
-
             if (chr1OldWeapon != chr1NewWeapon) { Assert.Pass(); }
             else if (chr1NewWeapon == chr1OldWeapon) { Assert.Fail(); }
-
-            if (chr2OldWeapon != chr2NewWeapon) { Assert.Pass(); }
-            else if (chr2NewWeapon == chr2OldWeapon) { Assert.Fail(); }
         }
 
         [Test]
